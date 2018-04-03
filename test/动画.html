@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="Zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>僵尸</title>
+</head>
+<body>
+<canvas id="canvas" width="400" height="400" style="background:#f1f1f1;"></canvas>
+</body>
+</html>
+<script type="text/javascript">
+  let canvas = document.getElementById('canvas');
+  let draw = canvas.getContext('2d');
+  let img = new Image();
+  img.src = 'img/11.png';
+  let w = img.width/10;
+  let step = 0;
+  img.onload = function () {
+    draw.drawImage(img,0,0,w,312,80,40,w,312)
+    setInterval(function () {
+      draw.clearRect(0, 0,canvas.width,canvas.height);
+      draw.drawImage(img,w * (step%10),0,w,312,80,40,w,312);
+      step++
+    },56)
+  }
+</script>

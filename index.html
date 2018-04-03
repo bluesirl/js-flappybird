@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="Zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Fbird</title>
+  <style type="text/css">
+    html,body,canvas{
+      margin: 0;
+      padding: 0;
+    }
+    #canvas {
+      margin: 0 auto;
+      display: block;
+      background: #f8f8f8;
+    }
+  </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<audio id="die" src="music/sfx_die.ogg"></audio>
+<audio id="hit" src="music/sfx_hit.ogg"></audio>
+<audio id="point" src="music/sfx_point.ogg"></audio>
+<audio id="swoo" src="music/sfx_swooshing.ogg"></audio>
+<audio id="wing" src="music/sfx_wing.ogg"></audio>
+</body>
+</html>
+<script src="js/Game.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/Background.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/Land.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/Pipe.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/Bird.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/SceneManager.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  // 只要保证game的实例化在最底下
+  let game = new Game();
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>珠峰培训2017-14JS</title>
+  <style type="text/css">
+    html,body,canvas {
+      margin: 0;
+      padding: 0;
+    }
+    #canvas {
+      display: block;
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500"></canvas>
+</body>
+</html>
+<script type="text/javascript">
+  let img = new Image();
+  img.src = 'img/1.jpg';
+  let canvas = document.getElementById('canvas');
+  let draw =canvas.getContext('2d');
+  /**
+   * drawImage(imgObj,sliceX,sliceY,sliceW,sliceH,offsetX,offsetY,width,height)
+   *
+   */
+
+  draw.drawImage(img,20,20,480,480,0,0,200,200);
+</script>
